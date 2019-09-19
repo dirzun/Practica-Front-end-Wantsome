@@ -1,1 +1,8 @@
 Practica Pe bune la Wantsome. Azi Invatam Git!
+<<<<<<< Updated upstream
+=======
+
+
+branch2 modificare
+mod2+++S
+>>>>>>> Stashed changes
