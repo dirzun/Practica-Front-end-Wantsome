@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formular html</title>
+    </head>
+    <body>
+        <h1>Formular HTML</h1>
+        <form>
+            <fieldset><p>Date Generale</p>
+            <label for="nume">Nume:</label>
+            <input name="nume" type="text" placeholder="Introdu Numele" required>
+            <br>
+            <label for="prenume">Prenume:</label>
+            <input name="prenume" type="text" placeholder="Introdu Prenumele" required>
+            <br>
+            <label for="sex">Sex:</label>
+            <input type="radio" name="sex" value="M" checked>M
+            <input type="radio" name="sex" value="F">F
+            <input type="radio" name="sex" value="Other">Altul...<textarea maxlength="15" rows="1" cols="10"></textarea>
+            <br>
+            <label for="age">Varsta:</label>
+            <input type="number" name="age" min="18" max="85" value="18">
+            </fieldset>
+            <br>
+            <fieldset><p>Provenienta</p>
+            <label for="prov">Tara:</label>
+            <input type="text" name="prov" placeholder="Tara">
+            <br>Oras:<input type="text" name="prov" placeholder="Oras">
+            <br>Adresa <input type="text" name="prov" placeholder="Adresa">
+            <br>Cod Postal <input type="text" name="prov" placeholder="Cod Postal">
+            </fieldset>
+            <br>
+            <fieldset><p>Alte detalii*:</p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+            <br>
+            <textarea rows="4" cols="50" placeholder="Lasa-mi un mesaj"></textarea>
+            <br>
+            <label for="alt">Atasare CV:</label>
+            <input type="file" name="alt" multiple>
+            </fieldset>
+            <a href="mailto:EMAILADDRESS"><input type="submit" value="Send">
+            </a>
+            <input type="reset">
+        </form>
+    </body>
+</html>
