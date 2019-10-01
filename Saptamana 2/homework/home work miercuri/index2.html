@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-
+<head> 
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 </head>
 <body>
     <form>
-        <fieldset>
-            <label for="search">Search for:</label><br>
-            <input type="text" name="search" placeholder="chocolate cheescake recipes" required>
-            <input type="button" name="serch" value="Search">
-            <br>
-            <div>
-            <label for="match">Match:</label>
-            <input type="radio" name="match" value="Any words">Any words
-            <input type="radio" name="match" value="All words">All words
-            <input type="radio" name="match" value="Exat phrase">Exat phrase
-            <br>
-            <input type="checkbox" name="match" value="Sound-alike matching">Sound-alike matching
-            <br>
-            </div>
-            <div>
-                <label for="per">Dated</label>
-                <input type="radio" name="per" value="#" required>
-                    <select name="per" >
-                        <option name="per" value="yers" >Within the last year</option>
-                        <option name="per" value="bla" >bla</option>
-                        <option name="per" value="bla1" >bla-bla</option>
-                        <option name="per" value="bla2" >bla-bla-bla</option>
+    <fieldset>
+        <table>
+        <tr>
+        <label for="search">Search for:</label><br />
+        <input type="text" name="search" maxlength="100" placeholder="chocolate cheescake recipes" required/>
+        <input type="button" name="serch" value="Search" />
+        </tr>
+        
+        <tr>
+            <td><label for="match">Match:</label></td><br>
+            <td>
+            <input type="radio" name="match" value="Any words" />Any words
+            <input type="radio" name="match" value="All words" />All words
+            <input type="radio" name="match" value="Exat phrase" />Exat phrase
+            <br />
+            <input type="checkbox" name="match" value="Sound-alike matching"/>
+            Sound-alike matching <br />
+            </td>
+        </tr>
+
+            <tr>
+                <td><label for="per">Dated:</label></td>
+                <td>
+                    <input type="radio" name="per" value="#" required />
+                    <select name="per">
+                    <option name="per" value="yers">Within the last year</option>
+                    <option name="per" value="bla">bla</option>
+                    <option name="per" value="bla1">bla-bla</option>
+                    <option name="per" value="bla2">bla-bla-bla</option>
                     </select>
-                <br>
-                <label for="date"></label>
-                <input type="radio" name="per">
+                    <br />
+
+                    <label for="date"></label>
+                    <input type="radio" name="per" />
                     <label for="from">From:</label>
                     <select name="from">
                         <option name="from">Ianuarie</option>
@@ -46,51 +54,62 @@
                         <option name="from">Noiembrie</option>
                         <option name="from">Decembrie</option>
                     </select>
-                    <input name="from" type="number" value="8" min="1" max="31">,
-                    <input name="from" type="number" value="2009" min="2008" max="2020">
-                    <br>
+                    <input name="from" type="number" value="8" min="1" max="31" />,
+                    <input name="from" type="number" value="2009" min="2008" max="2020"/>
+                    <br />
                     <label for="to">To:</label>
                     <select name="to">
-                            <option name="to">Ianuarie</option>
-                            <option name="to">Februarie</option>
-                            <option name="to">Martie</option>
-                            <option name="to">Aprilie</option>
-                            <option name="to">Mai</option>
-                            <option name="to">Iunie</option>
-                            <option name="to">Iulie</option>
-                            <option name="to">August</option>
-                            <option name="to">Septembrie</option>
-                            <option name="to" selected>Octombrie</option>
-                            <option name="to">Noiembrie</option>
-                            <option name="to">Decembrie</option>
+                        <option name="to">Ianuarie</option>
+                        <option name="to">Februarie</option>
+                        <option name="to">Martie</option>
+                        <option name="to">Aprilie</option>
+                        <option name="to">Mai</option>
+                        <option name="to">Iunie</option>
+                        <option name="to">Iulie</option>
+                        <option name="to">August</option>
+                        <option name="to">Septembrie</option>
+                        <option name="to" selected>Octombrie</option>
+                        <option name="to">Noiembrie</option>
+                        <option name="to">Decembrie</option>
                     </select>
-                    <input name="to" type="number" value="18" min="1" max="31">,
-                    <input name="to" type="number" value="2011" min="2008" max="2020">
-            </div>
-            <div>
-                <label for="with">Within:</label>
+                    <input name="to" type="number" value="18" min="1" max="31" />,
+                    <input name="to" type="number" value="2011" min="2008" max="2020"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="with">Within:</label></td>
+                <td>
                 <select name="with">
                     <option value="with">Description</option>
                     <option value="with">Description2</option>
                 </select>
-            </div>
-            <div>
-                <label for="show">Show:</label>
-                <input name="show" type="number" min="1" max="100" value="10">
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="show">Show:</label></td>
+                <td>
+                <input name="show" type="number" min="1" max="100" value="10" />
                 result
-                <select name="show"> 
+                <select name="show">
                     <option>with</option>
                     <option>with2</option>
                 </select>
                 summaries
-            </div>
-            <div>
-                <label for="sort">Sort by:</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label for="sort">Sort by:</label></td>
+                <td>
                 <select name="sort">
                     <option>relevance</option>
                     <option>low to hight</option>
                 </select>
-            </div>
+                </td>
+            </tr>
+        </table>
         </fieldset>
     </form>
 </body>
