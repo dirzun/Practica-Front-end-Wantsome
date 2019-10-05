@@ -1,0 +1,55 @@
+body{
+    padding: 0px;
+    margin: 10px;
+}
+header,footer{
+    border:3px solid greenyellow;
+    margin-bottom: 8px;
+    left: 0px;
+    text-align: center;
+    line-height: 30px;
+    bottom: 0px;
+    width: 100%;
+}
+.container{
+    margin:4px;
+    border: 2px solid green;
+    position: relative;
+    width:calc(100%-2%);
+    height: 250px;
+    align-items: center;
+    overflow: scroll;
+}
+nav{
+    border: 3px solid purple;
+    width:150px;
+    top:0px;
+    left: 0px;
+    bottom: 0px;
+    position: absolute;
+    margin-right: 5px;
+
+}
+section{
+    border: 3px solid orange;
+    margin-left: 4px;
+    padding: 10px;
+
+} 
+div{
+    top: 0px;
+    right: 0px;
+    
+    left: 150px;
+    height: 100%;
+    bottom: 0px;
+    position: absolute;
+    margin-left: 0px;
+}
+nav ul li{
+    padding: 2px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: blueviolet;
+}
