@@ -37,3 +37,12 @@ h2{
     border-bottom: 2px solid greenyellow;
     text-align: center;
 }
+#svg-img{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+}
+h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
