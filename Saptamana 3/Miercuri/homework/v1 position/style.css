@@ -2,6 +2,9 @@ body{
     padding: 0px;
     margin: 10px;
 }
+*{
+    box-sizing: border-box;
+}
 header,footer{
     border:3px solid greenyellow;
     margin-bottom: 8px;
