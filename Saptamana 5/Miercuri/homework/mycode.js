@@ -1,18 +1,13 @@
 //ex 1
 var is_string = function (ex1){
-    if (typeof ex1 === 'string')
-    return true;
-    else
-    return false;
+    return typeof ex1 === 'string';
 };
 
 
 //ex 2
-var is_Blank = function(blan){
-    if (blan.length <= 0 ) 
-    return true;
-    else
-    return false;
+var is_Blank = function(blank){
+    return blank === ""; 
+    
 };
 
 
@@ -24,8 +19,8 @@ return result;
 
 
 //ex.4
-var abbrev_name = function(abb){
-    var split_word = abb.split(" ");
+var abbrev_name = function(abvrev){
+    var split_word = abvrev.split(" ");
     var result = split_word[0] + " " + split_word[1].charAt(0)+".";
     return result;
 };
@@ -44,35 +39,30 @@ var truncate_string = function(trs,num){
 
 // ex.7
 var isUpperCaseAt = function(uppers,pos){
-    if ( uppers.charAt(pos) === uppers.charAt(pos).toUpperCase())
-        return true;
-        else
-        return false;
+    return uppers.charAt(pos) === uppers.charAt(pos).toUpperCase();     
 };
 
 //ex.8 
 // aici mi-a fost un pic mai greu am facut reseach pe net
-var insert = function(in1,in2,in3){
-    var inst = [in1.slice(0,in3) + in2 + in1.slice(in3)].join('');
-    return inst;
+var insert = function(insert1,insert2,insert3){
+    var insrt = [insert1.slice(0,insert3) + insert2 + insert1.slice(insert3)].join('');
+    return insrt;
 };
 
 //ex.9
 var remove_first_occurrence = function(rfo,rfos){
     var rfo_result = rfo.split(rfos);
-    return rfo_result;
+    return rfo_result.join();
 };
+console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
 
 //ex. 10
-var compare_strings = function(cs1,cs2){
-    if (cs1.toLowerCase() === cs2.toLowerCase() && cs1.toUpperCase() === cs2.toUpperCase() )
-    return true;
-    else
-    return false;
+var compare_strings = function(comparestring1,comparestring2){
+    return comparestring1.toLowerCase() === comparestring2.toLowerCase() && comparestring1.toUpperCase() === comparestring2.toUpperCase();
 };
 
 // ex. 11
 var Uncapitalize = function(uncap){
-    var un_cap = uncap.toLowerCase();
+    var un_cap = uncap[0].toLowerCase() + uncap.slice(1);
     return un_cap;
 }
