@@ -12,8 +12,8 @@ var is_Blank = function(blank){
 
 
 //ex.3
-var string_to_array = function(sta){
-var result = sta.split(" ");
+var string_to_array = function(stringul){
+var result = stringul.split(" ");
 return result;
 };
 
@@ -50,11 +50,16 @@ var insert = function(insert1,insert2,insert3){
 };
 
 //ex.9
-var remove_first_occurrence = function(rfo,rfos){
+/* var remove_first_occurrence = function(rfo,rfos){
     var rfo_result = rfo.split(rfos);
     return rfo_result.join();
 };
-console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog", 'the'));
+*/
+var remove_first_occurrence = function(rfo,rfos){
+    return rfo.replace('the','');
+}
+
+console.log(remove_first_occurrence("The quick brown fox jumps over the lazy dog the, the", 'the'));
 
 //ex. 10
 var compare_strings = function(comparestring1,comparestring2){
