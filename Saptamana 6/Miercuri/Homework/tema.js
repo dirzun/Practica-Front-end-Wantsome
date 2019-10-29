@@ -5,7 +5,6 @@ In urma apelului acestei functii, se va returna un text de forma "Persoana verif
 
 function verificareSex(cnp){
 //verificam daca cnp-ul introdus este de tip number si nu altul
-// !!!!!!!!!!!!!!nu stiu dece daca introduc mai multe litere de exemplu nu-mi afiseaza ca e gresit!!!!!!!!!!!!!!!!!
     if (typeof cnp != 'number') {
         return "CNP-ul a fost introdus gresit, introdu doar codul numeric.";
     }
@@ -17,7 +16,7 @@ function verificareSex(cnp){
     }
 
 //extragem doar primul element din string 
-    var primulElement =  numberToString.charAt(0);         
+    var primulElement = numberToString.charAt(0);         
 // comparam valoare primului element conform normelor stabilite de statului Roman https://ro.wikipedia.org/wiki/Cod_numeric_personal 
     if (primulElement == 1 || primulElement == 3 || primulElement == 5 || primulElement == 7 ) {   
         return "Persoana verificata este de sexul M.";
