@@ -7,7 +7,7 @@ var cars = [
 ];
 - afiseaza in consola array-ul sortat
  */
-(function(){
+var sortare = (function(){
 var cars = [
     { name: "John",  salary: 20000 },
     { name: "Danny", salary: 30500 },
@@ -15,13 +15,13 @@ var cars = [
 ];
 
     
-    cars.sort((a, b) => {
-        if (b.salary > a.name) {
+cars.sort((a, b) => {
+        if (a.salary > b.salary) {
             return 1;           
         }
         else {
             return -1;
         }
-    })
-console.log(cars);
+    });
+    return cars;
 })();
