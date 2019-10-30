@@ -7,7 +7,14 @@ var cars = [
 ];
 - afiseaza in consola array-ul sortat
  */
-var sortare = (function(){
+/*
+am scris o functie de tip iife - autoapelanta care am asignato variabilei "sortare".
+-functia sorteaza crescator(de la mic la mare) in fucntie de valoare "salary" 
+Avem un obiect "car" care are in el 3 siruri de date.
+*/
+
+
+ var sortare = (function(){
 var cars = [
     { name: "John",  salary: 20000 },
     { name: "Danny", salary: 30500 },
@@ -25,3 +32,4 @@ cars.sort((a, b) => {
     });
     return cars;
 })();
+    

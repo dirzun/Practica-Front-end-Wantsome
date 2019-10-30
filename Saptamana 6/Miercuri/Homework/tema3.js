@@ -6,6 +6,19 @@ Una dintre implementari trebuie sa fie bazata pe Object Literals ( read:  https:
 
 
 
+/*
+1. am creat o functie cu numele "checkCar" care accepta parametrul "marca" - modelul masinii care dorim sa afla din ce tara e.
+2. am creat un obiect/ array - unde stochez mai multe string-uri in cazul nostru marcile masinilor.
+3. am creat o variabila "marcalower" in care prima litera din parametrul se va stoca cu majuscula
+4. am creat o functie "tara" care are ca parametru "marcalower" - modelul masinii introduse .
+5. functia compara daca stringul introdus se ragaseste in Array, in caz ca se regaseste primim rezultatul tara de origine a masinii.
+6. in caz ca nu se regaseste in nici unul din sirurile de data declare functia va avea ca rezultat "false".
+7. am declarat o conditie daca functia tara returneaza rezultatul "false" - functia mama "checkCar" sa ne afiseze un text....."
+8. daca functia tara- returneaza tara de origine a marcii fucntia mama "checkCar" ne afiseaza un test"...." care inglobeaza "marca" masini si "tara" de origine.
+*/
+
+
+
 // v1 inceput
 /*
 function checkCar(marca){
@@ -69,7 +82,6 @@ function checkCar(marca){
             case (carBase.Germany.includes(marcalower) ):
                 return  "Germany";
                 break;
-                
             case (carBase.Czech.includes(marcalower) ):
                 return  "Czech";
                 break;

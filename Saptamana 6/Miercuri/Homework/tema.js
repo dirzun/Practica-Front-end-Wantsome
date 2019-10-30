@@ -2,7 +2,7 @@
 1. Scrieti o functie sub forma named function care accepta ca argument un CNP si verifica sexul unei persoane.
 In urma apelului acestei functii, se va returna un text de forma "Persoana verificata este de sexul M/F".
 */
-
+// am scris o functie cu numele " verificareSex" si paramentrul "cnp"
 function verificareSex(cnp){
 //verificam daca cnp-ul introdus este de tip number si nu altul
     if (typeof cnp != 'number') {
@@ -26,3 +26,4 @@ function verificareSex(cnp){
     }
     else { return "Ai introdus gresit CNP-ul."; }
 }
+//done

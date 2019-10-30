@@ -9,8 +9,13 @@ Criteriile sunt urmatoarele:
 - 10 = A+
 Functia va returna un text de forma "Calificatul corespunzator punctajului [punctaj] este [calificativ]".
 */
+
+
+//am creat o variabila "calitativ" caruia i-am asignat functia cu paramentru punctaj""
 var calificativ = function(punctaj){
+    // prin metoda switch verificam daca punctajul se incadreaza in normele definite
     switch(true){
+        //cazul 1 comparata daca numarul introduce este mai mic sau egal 1 sau mai mic decat 3, daca rezultatul este corect functia se va opri si  se va afisa textul din "return ....", daca nu va compara mai departe...
         case (punctaj <= 1 || punctaj < 3):
             return "Calificatul corespunzator punctajului " + punctaj + " este " + " E";
             break;
@@ -26,6 +31,7 @@ var calificativ = function(punctaj){
         case (punctaj === 10):
             return "Calificatul corespunzator punctajului " + punctaj + " este " + " A+";
             break;
+            // in cazul in care paramentrul introdus nu corespunde cu cazurile de mai sus, se va afisa un text standard care il definim ca "default".
         default:
             return "Introdu punctajul de la 1 la 10";
     }
