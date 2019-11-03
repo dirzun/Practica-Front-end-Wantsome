@@ -83,7 +83,8 @@ objectAr2(cat);
 */
 
 
-//ex.4
+//ex.4 
+//v1
 function multiplyNumber(){
 
     for (i = 0; i < 11; i++){
@@ -92,3 +93,53 @@ function multiplyNumber(){
 
 };
 multiplyNumber();
+
+//v2
+function multiplyNumber2(){
+
+    for (i = 1; i < 256; i*=2){
+        console.log(i);
+    }
+
+};
+multiplyNumber2();
+
+//v3
+function multiplyNumber3(){
+
+    for (i = 0; i < 6; i++){
+        console.log(i*2);
+    }
+
+};
+multiplyNumber3();
+
+//v4
+function multiplyNumber4(){
+
+    for (i = 3; i < 16; i+=3){
+        console.log(i);
+    }
+
+};
+multiplyNumber4();
+
+//v5
+function multiplyNumber5(){
+
+    for (i = 9; i >= 0; i--){
+        console.log(i);
+    }
+
+};
+multiplyNumber5();
+
+//v6
+function multiplyNumber6(){
+
+    for (i = 1; i <= 4; i++){
+        console.log(i);
+    }
+
+};
+multiplyNumber6();

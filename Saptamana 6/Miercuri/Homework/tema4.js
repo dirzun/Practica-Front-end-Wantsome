@@ -13,7 +13,7 @@ am scris o functie de tip iife - autoapelanta care am asignato variabilei "sorta
 Avem un obiect "car" care are in el 3 siruri de date.
 */
 
-
+/*
  var sortare = (function(){
 var cars = [
     { name: "John",  salary: 20000 },
@@ -33,3 +33,20 @@ cars.sort((a, b) => {
     return cars;
 })();
     
+*/
+
+//v2
+var cars = [
+    { name: "John",  salary: 20000 },
+    { name: "Danny", salary: 30500 },
+    { name: "Bekker", salary: 15000 }
+];
+
+(function(){
+    return cars.sort(function (a, b){
+        return(a.salary - b.salary);
+    })
+}
+)();
+
+console.log(cars);
