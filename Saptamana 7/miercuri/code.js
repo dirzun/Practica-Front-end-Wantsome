@@ -60,6 +60,18 @@ function stringMultiConcat(firstString,repeatTimes){
 //Ex5
 // A palindrome is a word or a phrase that is the same whether you read it backward or forwards, for example, the word 'level'.
 // Scrieti o functie care verifica daca un string este palindrom; Implementati mai multe variante
+function palindrome(unCuvant){
+    var cuvantArr = unCuvant.split('');
+    var cuvantArrReverse = cuvantArr.reverse();
+    if ( unCuvant === cuvantArrReverse.join('')){
+        return "Cuvantul este 'palindrome'";
+    }
+    else{
+        return "is not polindrome"
+    }
+    
+}
+
 
 //Ex6
 // Implementati o functie care accepta ca argument un array compus din mai multe array-uri de valori numerice si returneaza un array care 
