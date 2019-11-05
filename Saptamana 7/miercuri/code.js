@@ -170,7 +170,6 @@ function functieCautare(unArrai,oValoare){
 }
 // Ex 13
 // Scrieti o functie care elimina toate valorile false dintr-un array: false, null, 0, "", undefined, NaN
-//=== false || iarUnArray[i] === null || iarUnArray[i] === 0 || iarUnArray[i] === "" || typeof iarUnArray[i] === "undefined" || isNaN(iarUnArray[i])
 function iarOFunctie(iarUnArray){ 
     resulFunctie = [];
 var i = 0;
@@ -183,14 +182,7 @@ var i = 0;
     return resulFunctie;
     
 }
-/*
-=== false ||
-            iarUnArray[i] === null ||
-            iarUnArray[i] === 0 ||
-            iarUnArray[i] === "" || 
-            typeof iarUnArray[i] === "undefined" || 
-            isNaN(iarUnArray[i]))
-*/
+
 // Ex 14
 // Scrieti o functie care repeta un string de n ori specificate
 function stringRepeat(string,numarRepetari){
