@@ -107,14 +107,47 @@ function factorialCalc(numFactorial){
 }
 //Ex9
 // Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul se termina cu cel din urma
+/*compar daca al doilea string se regaseste in primul */
+
+function functieStringCompare(stringul1,stringul2){
+    if (stringul1.length < stringul2.length){
+        return "Introdu si tu primul string mai mare :D";
+    }
+    var stringul2Lungime = stringul2.length;
+    var stringul1Ultimul = stringul1.slice(-stringul2Lungime);
+    if (stringul2 === stringul1Ultimul){
+        return "Primul string se termina cu al 2-lea"
+    }
+    else{
+        return "iesi afara!"
+    }
+
+}
 
 //Ex10
 // Implementati o functie care accepta doua argumente: un array si o functie de adevar. Functia returneaza primul element din array care 
 //trece testul specificat
+/*
+un array cu numere , si o functie de exemplu care imi cauta nr pare, sau impare si mi le returneaza;
+*/
 
+function parOrImpar(numarulDinArr){
+    if(numarulDinArr % 2 == 0)
+        return "Par";
+    return "Impar";
+};
+function oFunctie(unArray,functiaMea){
+    for (var i = 0; i<unArray.length;i++){
+        if(parOrImpar(unArray[i]) === "Par"){
+            return "Ehehei "+unArray[i]+" e par ";
+        }
+    }
+    return unArray + " nu contine numere pare";
+    }
 //Ex11
 // Implementati o functie care accepta ca argumente doua string-uri si verifica daca primul string contine toate literele celui de-al doilea 
 //string
+/* */
 function stringCompare(string1,string2){
     if (string1 === string2){
         return "toto bene"
@@ -127,9 +160,24 @@ stringCompare("abcd","abcd");
 // Ex 12
 // Implementati o functie care accepta ca argumente doi parametri: un array si o valoare. Functia afiseaza fiecare element al array-ului pana 
 //cand intalneste elementul cu valoarea specificata
-
+function functieCautare(unArrai,oValoare){
+    for (var i = 0;i < unArrai.length; i++){
+        if (unArrai[i] === oValoare){
+            return "Acest array contine valoarea " + oValoare;
+        }
+    }
+    return "In acest array ["+ unArrai + "] nu se regaseste valoarea "+ oValoare;
+}
 // Ex 13
 // Scrieti o functie care elimina toate valorile false dintr-un array: false, null, 0, "", undefined, NaN
+//=== false || iarUnArray[i] === null || iarUnArray[i] === 0 || iarUnArray[i] === "" || typeof iarUnArray[i] === "undefined" || isNaN(iarUnArray[i])
+function iarOFunctie(iarUnArray){    
+    for (var i=0 ; i <= iarUnArray.length; i++){
+        if( iarUnArray[i] === false || iarUnArray[i] === null || iarUnArray[i] === 0 || iarUnArray[i] === "" || typeof iarUnArray[i] === "undefined" || isNaN(iarUnArray[i]) ){
+            iarUnArray.splice(i, 1);
+        }
+    }
+}
 
 // Ex 14
 // Scrieti o functie care repeta un string de n ori specificate
