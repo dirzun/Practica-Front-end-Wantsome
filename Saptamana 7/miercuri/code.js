@@ -174,7 +174,10 @@ function iarOFunctie(iarUnArray){
     resulFunctie = [];
 var i = 0;
     while( i < iarUnArray.length){
-        if ( !iarUnArray[i]!== true){
+        if ( !iarUnArray[i]){
+            iarUnArray.slice[i,0];
+        }
+        else{
             resulFunctie.push(iarUnArray[i]);
         }
             i++;
