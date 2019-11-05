@@ -171,12 +171,22 @@ function functieCautare(unArrai,oValoare){
 // Ex 13
 // Scrieti o functie care elimina toate valorile false dintr-un array: false, null, 0, "", undefined, NaN
 //=== false || iarUnArray[i] === null || iarUnArray[i] === 0 || iarUnArray[i] === "" || typeof iarUnArray[i] === "undefined" || isNaN(iarUnArray[i])
-function iarOFunctie(iarUnArray){    
-    for (var i=0 ; i <= iarUnArray.length; i++){
-        if( iarUnArray[i] === false || iarUnArray[i] === null || iarUnArray[i] === 0 || iarUnArray[i] === "" || typeof iarUnArray[i] === "undefined" || isNaN(iarUnArray[i]) ){
-            iarUnArray.splice(i, 1);
+function iarOFunctie(iarUnArray){ 
+var resultFunctie = [];
+    var i = 0;
+    while( i <= iarUnArray.length){
+        if ( iarUnArray[i] === false ||
+            iarUnArray[i] === null ||
+            iarUnArray[i] === 0 ||
+            iarUnArray[i] === "" || 
+            typeof iarUnArray[i] !== "undefined" || 
+            isNaN(iarUnArray[i])){
+            resultFunctie.push(iarUnArray.splice(i,1));
         }
+            i++;
     }
+    
+    return resultFunctie;
 }
 
 // Ex 14
