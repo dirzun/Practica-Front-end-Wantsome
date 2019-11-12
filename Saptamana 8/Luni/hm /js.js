@@ -207,7 +207,6 @@ function isSquareNumber (numrr){
 // isAnagram("silent", "listen") => true
 
 
-
 function isAnagram(stringul1,stringul2){
     let string1Arr = stringul1.toLowerCase().replace(/[' ']/g, '').split("").sort().join(''); 
     let string2Arr = stringul2.toLowerCase().replace(/[' ']/g, '').split("").sort().join('');
