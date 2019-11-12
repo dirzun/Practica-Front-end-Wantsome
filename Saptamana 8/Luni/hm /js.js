@@ -206,7 +206,7 @@ function isSquareNumber (numrr){
 // isAnagram("School master", "The class room") => true
 // isAnagram("silent", "listen") => true
 
-//inca nu e gata
+
 
 function isAnagram(stringul1,stringul2){
     let string1Arr = stringul1.toLowerCase().replace(/[' ']/g, '').split("").sort().join(''); 
