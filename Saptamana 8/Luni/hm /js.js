@@ -206,6 +206,10 @@ function isSquareNumber (numrr){
 // isAnagram("School master", "The class room") => true
 // isAnagram("silent", "listen") => true
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 340aed313641063c21a0e7664f69e6cec7a6a02b
 
 function isAnagram(stringul1,stringul2){
     let string1Arr = stringul1.toLowerCase().replace(/[' ']/g, '').split("").sort().join(''); 
