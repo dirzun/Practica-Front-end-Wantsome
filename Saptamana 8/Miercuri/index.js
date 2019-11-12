@@ -95,13 +95,10 @@ const paramStrr = unstrr => unstrr.split('').reverse().join('');
   */
   function inlocLetter(unCuv){
 
-      console.log(String.fromCharCode(66));
-    let  unCuvant = unCuv.split('');
-    console.log(unCuvant);
     let result = [];
-      for (let i = 0; i < unCuvant.length;i++){
-            //console.log(result.push(unCuvant.charCodeAt[i] + 1));
-            unCuvant[i]
+      for (let i = 0; i < unCuv.length;i++){
+        let litera = unCuv.charCodeAt(i)+1;
+        result += String.fromCharCode(litera);
       }
       return result;
   }
@@ -110,13 +107,28 @@ const paramStrr = unstrr => unstrr.split('').reverse().join('');
   5. Implementati o functie convertToTime care accepta ca parametru o valoare numerica si o converteste la numarul de ore si minute corespunzatoare.
   Exemplu: input: 64  ->  output: 1:4
   */
-  
+  const convertToTime = arr => Math.floor(arr / 60) + " : " + (arr - 60 * Math.floor(arr / 60));
   /*
   6. Implementati o functie care accepta ca parametru un string si returneaza string-ul cu toate literele ordonate alfabetic
   */
-  
+  const alfabeticStr = unStr => unStr.split('').sort().join('');
   /*
   7. Implementati o functie care accepta ca parametru un string si verifica daca inainte si dupa fiecare litera din cadrul sau se afla caracterul '+'
   Exemplu: input: "+a+b+c+"   ->   output: true
   Exemply: input: "+ab+c+d+"  ->   output: false
   */
+
+  const checkPlus = str =>{
+    let plus = "+";
+    strArr = str.split("");
+    if (strArr[0] !== plus || strArr[strArr.length -1] !== plus) {
+      return false;
+    }
+    console.log(strArr[strArr.length -1]);
+    for( let i = 1; i< strArr.length; i+=2){
+      if (strArr[i]=== plus){
+        return false;
+      }
+    } 
+    return true;
+  }
