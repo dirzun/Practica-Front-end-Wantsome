@@ -1,76 +1,3 @@
-//ex1 
-function check() {
-    let b = 2;
-    console.log(b);
-    {
-        b = 3; // TODO inlocuiti linia asta de cod astfel incat sa avem ambele console.log-uri sa ruleze si sa printeze amandoua pe rand 2 si 3
-        console.log(b);
-    }
-}
-check();
-
-
-
-/*
-// Try to understand what happens and how to change things for finanl result to be 3 not 8.
-function foo(){
-    function bar() {
-        return 3;//do not change this line
-    }
-    return bar();
-    function bar() {
-        return 8;// do not change this line
-    }
-}
-console.log(foo()); return 8
-*/
-/*
-// Try to understand what happens and how to change things for finanl result to be 3 not 8.
-function foo(){
-    function bar() {
-        return 8;// do not change this line
-    }
-    function bar() {
-        return 3;//do not change this line
-    }
-    return bar();
-    
-}
-console.log(foo()); return 3
-*/
-/*
-// Try to understand what happens and how to change things for finanl result to be 3 not 8.
-function foo(){
-    function bar() {
-        return 3;//do not change this line
-    
-    
-    function bar() {
-        return 8;// do not change this line
-    }}
-    return bar();
-}
-console.log(foo()); return 8
-*/
-
-
-
-function outer() {
-    var b = 10;
-    function inner() {
-        var a = 20; 
-        console.log(a+b);
-    }
-    return inner;
-}
- var firstTime = outer(); //outer() invoked the first time       ---return 30
- var secondTime = outer(); //outer() invoked the second time
-
-
-
-
-
-
 //Ex1
 //Vreau sa am o functie care sa-mi calculeze suma dintre 2 numere daca ele sunt diferite iar daca sunt egale sa-mi imulteasca suma lor cu 5
 //ex myFunction(10, 5) - output 15 // myFunction(10,10) - output 100
@@ -96,7 +23,7 @@ function testFunction(nr1,nr2){
 /* else if (nr1 === 30 && nr2 === 30 && (nr1 + nr2) === 30){
     return true;
 }
-else*/
+else */
     return false;
 
 };
@@ -108,7 +35,6 @@ else*/
 
 function checkString(unString){
     unString2 = unString.slice(0,2);
-console.log(unString2);
     if ( unString2 == "JS"){
         return unString;
     }
@@ -116,7 +42,7 @@ console.log(unString2);
         return "JS" + unString;
     }
 };
-checkString('JSis');
+// checkString('JSis');
 
 //Ex4     ----------------------------------------------------------------------
 //Scrieti o functie care sa scoata literele/cifrele duplicate dintr-un string/numbar
@@ -134,7 +60,7 @@ function removeDuplicates(array) {
     }
     return newArray
 };
-removeDuplicates();
+//removeDuplicates();
 
 //Ex5
 // Gasiti cel mai lung string intr-o fraza
@@ -143,7 +69,7 @@ removeDuplicates();
 const findLongestString = oFraza =>{
 return oFraza.split(" ").sort(function(a,b){return b.length-a.length;})[0];
 };
-findLongestString();
+//findLongestString();
 
 //Ex6
 //Scrieti o functie care sa aiba output-ul asta
@@ -152,15 +78,15 @@ findLongestString();
 // * * *  
 // * * * *  
 // * * * * *  
+
 const incrementFunc = (unaCeva, deCateOri) => {
-    let result = "";
+    let resultIncrement = " ";
     for (let i = 0; i < deCateOri ; i++) {
-    result += " " + unaCeva;
-    console.log(result);
+    resultIncrement += " " + unaCeva;
 };
-return result;
+return resultIncrement;
 };
-incrementFunc("ceva", 4);
+incrementFunc();
 
 
 
@@ -172,8 +98,13 @@ const negativeNumbers = [];
 
 function extractNegativeNumbers(numbers) {
     // append any negative numbers found in the numbers array 
-    // into the negativeNumbers array constant variable above
- 
+    // into the negativeNumbers array constant variable above\
+    for(i=0; i< numbers.length; i++){
+        if (numbers[i] < 0) {
+            negativeNumbers.push(numbers[i]);
+        };
+        }
+    return negativeNumbers;
 };
 extractNegativeNumbers([1,2,-5,4,-6]);
 
@@ -207,6 +138,23 @@ calculate(2, 5, "add");
 // isDiv(9)=> "THREE"
 // isDiv(7)=> 7
 
+function isDiv(numarulMagic){
+    if (numarulMagic % 3 === 0 && numarulMagic % 5 === 0){
+        return "BOTH";
+    }
+    else if(numarulMagic % 5 === 0){
+        return "FIVE";
+    }
+    else if 
+        (numarulMagic % 3 === 0){
+            return "THREE";
+    }
+    else {
+        return numarulMagic;
+    }
+}
+isDiv();
+
 
 //Master exercises
 //Ex9 
@@ -228,16 +176,11 @@ console.log(aboutToday());
 // validPin("z23f") => false
 
 function validPin(pin){
-    if (typeof pin !== "number" ) {
-        return "introduceti un pin valid din cifre"
-    };
-
-    if (pin.length >= 4 || pin.length <= 6) {
-        return "true";        
-    }
-    else{
-        return "false";
-    };
+    if (typeof pin === 'string'){ pin = Math.floor(pin); }
+    let pinString = pin.toString();
+    if (typeof pin === 'number' && pinString.length >= 4 && pinString.length <= 6){
+    return true}
+    else{ return false;}
 };
 validPin();
 
@@ -245,18 +188,39 @@ validPin();
 //Folosind regex vreau sa scot toate vocalele dintr-un string
 // removeVowels("Hey I am developer") => "Hy m dvlpr"
 function removeVowels(introduCeva){
-    let reg = /^[aeiou]$/i;
-    return introduCeva.compile(reg);
-}
-
+    let reg = /[aeiou]/g;
+    return introduCeva.toLowerCase().replace(reg, '');
+};
+removeVowels();
 //ex12
 //Vreau sa am o functie care sa verifice daca un numar este patrat
 // isSquareNumber(-1) => false
 // isSquareNumber(25) => true
 // isSquareNumber(3) => false
-
+function isSquareNumber (numrr){
+    return  numrr > 0 && Math.sqrt(numrr) % 1 === 0;
+}
 
 //ex13
 // Vreau sa am o functie care sa verifice daca un cuvant este o anagrama- daca toate literele din primul string se regasesc in al doilea
 // isAnagram("School master", "The class room") => true
 // isAnagram("silent", "listen") => true
+
+//inca nu e gata
+
+function isAnagram(stringul1,stringul2){
+    let string1Arr = stringul1.toLowerCase().replace(/[' ']/g, '').split("").sort().join(''); 
+    let string2Arr = stringul2.toLowerCase().replace(/[' ']/g, '').split("").sort().join('');
+    if (string1Arr.length !== string2Arr.length) {
+        return " Numarul de caractere trebuie sa fie la fel";
+    }
+    
+    if (string1Arr === string2Arr){
+        return true;
+    } else { return false;}
+}
+isAnagram();
+/*
+-string sa-l transf in array
+-
+*/
