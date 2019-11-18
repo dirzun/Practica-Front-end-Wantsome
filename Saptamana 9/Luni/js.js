@@ -113,7 +113,7 @@ const oddnum = a =>{
     return a;
   }; 
 }
-console.log(filter(arrai,oddnum));
+//console.log(filter(arrai,oddnum));
 
 //divisibil 3
 const div3 = b =>{
@@ -121,7 +121,23 @@ const div3 = b =>{
     return b;
   };
 }
-console.log(filter(arrai,div3));
+//console.log(filter(arrai,div3));
+
+
+
+const removeDuplicates = array => {
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+      if (newArray.indexOf(array[i]) == -1) {
+          newArray.push(array[i])
+      }
+  }
+  return newArray;
+};
+//console.log(filter(arrai,removeDuplicates));
+
+
+
 //Now translate the upper function to ES6 syntax
 
 
@@ -135,7 +151,26 @@ Write a function named multipleCallbacks that accepts 3 arguments:
 
 The function should be written directly into ES6 specific syntax
 */
+const ob1 ={
+  status : "succes"};
+const ob2 = {
+  status : "error"
+};
 
+const multipleCallbacks = (arg1,arg2,arg3)=>{
+
+  if (Object.keys(arg1)[0] !== "status") {
+  return "iesi afara!";
+}
+  if (Object.value(arg1)[0] === "succes") {
+  return "succes"  ;
+}
+  if (Object.value(arg1)[0] === "error"){
+    return "error";
+  }
+};
+
+multipleCallbacks();
 // 5
 /*
 -- FAKE DATA FETCHER --
@@ -183,6 +218,11 @@ and should print on the browser's console only the employees that are developers
 Requirement: reuse the filtering function that you have already implemented
 */
 
+
+
+
+
+
 // 6
 /*
 Read about setInterval here: https://www.w3schools.com/jsref/met_win_setinterval.asp
@@ -204,3 +244,15 @@ theFinalCountdown(10); call will display:
 
 and then stops
 */
+
+
+const theFinalCountdown = countNum =>{
+  let i = countNum;
+  do {
+    i--;
+    console.log((i+1) + "\n"+ ("(...after 1s)"));
+  }
+  while (i > 0);
+console.log("0");
+}
+//theFinalCountdown(10);
