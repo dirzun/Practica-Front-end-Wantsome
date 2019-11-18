@@ -1,55 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
-   <script>
-    const books = [
-  {title: 'The Power of Habit',
-   author: 'Charles Duhigg',
-   read: true
-  },
-  {title: 'Mindset: The New Psychology of Success',
-  author: 'Carol S. Dweck',
-  read: false
-  }];
-  books[0].imgsrc = "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1545854312l/12609433._SY475_.jpg";
-    books[0].url = "https://www.goodreads.com/book/show/12609433-the-power-of-habit?ac=1&from_search=true&qid=IkI8hlP13T&rank=1";
+  </head>
+  <body>
+    <script>
+      const books = [
+        { title: "The Power of Habit", author: "Charles Duhigg", read: true },
+        {
+          title: "Mindset: The New Psychology of Success",
+          author: "Carol S. Dweck",
+          read: false
+        }
+      ];
+      books[0].imgsrc =
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1545854312l/12609433._SY475_.jpg";
+      books[0].url =
+        "https://www.goodreads.com/book/show/12609433-the-power-of-habit?ac=1&from_search=true&qid=IkI8hlP13T&rank=1";
 
-    books[1].imgsrc = "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436227012l/40745._SY475_.jpg";
-     books[1].url = "https://www.goodreads.com/book/show/40745.Mindset?from_search=true&qid=Dl5qfQ8OhK&rank=1";
-// Creati o pagina web care are un h1 cu "Book List"
-let bod = document.getElementsByTagName("body")[0];
-bod.appendChild(document.createElement('h1')).textContent="Book List";
-// adugati un script style unde sa tinem js-ul
-//Iterati fiecare carte si pentru fiecare creati un p care sa contina titlul si autorul si faceti append in pagina noastra
-for (let i = 0; i<books.length; i++){
-    bod.appendChild(document.createElement('p')).textContent = books[i].title + "\n" + " by " + books[i].author;
-}
-//BONUS: folositi ul si li pentru a face display la carti
-for (let i = 0; i < books.length; i++){
-    let ul = document.createElement('ul');
-    let li = document.createElement('li');
-    let ach = document.createElement('a');
-    let img = document.createElement('img');
-    
-    bod.appendChild(ul).appendChild(li).textContent = books[i].title + " by " + books[i].author;
-    li.appendChild(document.createElement("br"));
-    li.appendChild(ach).setAttribute("href", books[i].url);
-    ach.setAttribute("target", "_blank");
-    ach.appendChild(img).setAttribute("src", books[i].imgsrc);
-    img.setAttribute("style", "width:100px;height:auto;margin:10px;")
-    if (books[i].read){
-        li.style.color="green";
-    }else {li.style.color="red";}
-}
-//BONUS: adaugati o proprietaet pentru fiecare carte cu URL de la coverul cartii si adaugati un element img pentru fiecare (nu uitati sa adaugati img-ul si pe obiectul cartii - acolo va fi si poza)
-// ca sa evitam citirea afisarea incorecta "hoisting" am mutat acesta modificari sub obiect.
-//BONUS: schimbati style-ul pentru fiecare carte in functie daca a fost citita sau nu.
-    </script> 
-</body>
+      books[1].imgsrc =
+        "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1436227012l/40745._SY475_.jpg";
+      books[1].url =
+        "https://www.goodreads.com/book/show/40745.Mindset?from_search=true&qid=Dl5qfQ8OhK&rank=1";
+      // Creati o pagina web care are un h1 cu "Book List"
+      let bod = document.getElementsByTagName("body")[0];
+      bod.appendChild(document.createElement("h1")).textContent = "Book List";
+      // adugati un script style unde sa tinem js-ul
+      //Iterati fiecare carte si pentru fiecare creati un p care sa contina titlul si autorul si faceti append in pagina noastra
+      for (let i = 0; i < books.length; i++) {
+        bod.appendChild(document.createElement("p")).textContent =
+          books[i].title + "\n" + " by " + books[i].author;
+      }
+      //BONUS: folositi ul si li pentru a face display la carti
+      for (let i = 0; i < books.length; i++) {
+        let ul = document.createElement("ul");
+        let li = document.createElement("li");
+        let ach = document.createElement("a");
+        let img = document.createElement("img");
+
+        bod.appendChild(ul).appendChild(li).textContent =
+          books[i].title + " by " + books[i].author;
+        li.appendChild(document.createElement("br"));
+        li.appendChild(ach).setAttribute("href", books[i].url);
+        ach.setAttribute("target", "_blank");
+        ach.appendChild(img).setAttribute("src", books[i].imgsrc);
+        img.setAttribute("style", "width:100px;height:auto;margin:10px;");
+        if (books[i].read) {
+          li.style.color = "green";
+        } else {
+          li.style.color = "red";
+        }
+      }
+      //BONUS: adaugati o proprietaet pentru fiecare carte cu URL de la coverul cartii si adaugati un element img pentru fiecare (nu uitati sa adaugati img-ul si pe obiectul cartii - acolo va fi si poza)
+      // ca sa evitam citirea afisarea incorecta "hoisting" am mutat acesta modificari sub obiect.
+      //BONUS: schimbati style-ul pentru fiecare carte in functie daca a fost citita sau nu.
+    </script>
+  </body>
 </html>

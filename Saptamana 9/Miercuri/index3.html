@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
-        <h1>Despre mine</h1>
-        <ul>
-            <li>Nume: <span id="name"></span>
-            <li>Bautura Favorita:  <span id="fav-drink"></span>
-            <li>Locul nasteri: <span id="born-place"></span>
-        </ul>
-<script>
-// Adaugati un tag script la final
-// Schimbati stilul body-ului sa aiba font-family "Arial, sans-serif"
-document.getElementsByTagName("body")[0].style.fontFamily="Arial, sans-serif";
-// Schimbati fiecare span(name, fav-drink, born-place) cu informatiile despre voi
-document.getElementById("name").textContent ="Dirzu Nicu";
-document.getElementById("fav-drink").textContent = "Red Wine";
-document.getElementById("born-place").textContent = "R.Moldova, Balti";
-// Iterati prin fiecare "li" si puneti clasa "listitem".
-for (let i =0; i<3;i++){
-document.getElementsByTagName("li")[i].classList.add("listitem");}
-//Adaugati un tag style(in head) care seteaza o regula pentru .listitem sa aiba culoarea rosie
-document.getElementsByTagName("head")[0].appendChild(document.createElement('style')).textContent = ".listitem{background-color:red;} ";
-// Creati un element img si setati atributul src sa aiba o poza cu voi sau ceva random de pe net. Puneti acest element(append) la pagina noastra
-document.getElementsByTagName('body')[0].appendChild(document.createElement('img')).setAttribute('src', 'https://dc8gwjuur0w0x.cloudfront.net/lists/avatars/000/000/047/original_o-PINT-GLASS-BEER-facebook.jpg?1473216955');
-</script>
-</body>
+  </head>
+  <body>
+    <h1>Despre mine</h1>
+    <ul>
+      <li>Nume: <span id="name"></span></li>
+      <li>Bautura Favorita: <span id="fav-drink"></span></li>
+      <li>Locul nasteri: <span id="born-place"></span></li>
+    </ul>
+
+    <script>
+      // Adaugati un tag script la final
+      // Schimbati stilul body-ului sa aiba font-family "Arial, sans-serif"
+      document.getElementsByTagName("body")[0].style.fontFamily =
+        "Arial, sans-serif";
+      // Schimbati fiecare span(name, fav-drink, born-place) cu informatiile despre voi
+      document.getElementById("name").textContent = "Dirzu Nicu";
+      document.getElementById("fav-drink").textContent = "Red Wine";
+      document.getElementById("born-place").textContent = "R.Moldova, Balti";
+      // Iterati prin fiecare "li" si puneti clasa "listitem".
+      for (let i = 0; i < 3; i++) {
+        document.getElementsByTagName("li")[i].classList.add("listitem");
+      }
+      //Adaugati un tag style(in head) care seteaza o regula pentru .listitem sa aiba culoarea rosie
+      document
+        .getElementsByTagName("head")[0]
+        .appendChild(document.createElement("style")).textContent =
+        ".listitem{background-color:red;} ";
+      // Creati un element img si setati atributul src sa aiba o poza cu voi sau ceva random de pe net. Puneti acest element(append) la pagina noastra
+      document
+        .getElementsByTagName("body")[0]
+        .appendChild(document.createElement("img"))
+        .setAttribute(
+          "src",
+          "https://dc8gwjuur0w0x.cloudfront.net/lists/avatars/000/000/047/original_o-PINT-GLASS-BEER-facebook.jpg?1473216955"
+        );
+    </script>
+  </body>
 </html>
