@@ -22,9 +22,8 @@ document.getElementById("name").textContent ="Dirzu Nicu";
 document.getElementById("fav-drink").textContent = "Red Wine";
 document.getElementById("born-place").textContent = "R.Moldova, Balti";
 // Iterati prin fiecare "li" si puneti clasa "listitem".
-document.getElementsByTagName("li")[0].classList.add("listitem");
-document.getElementsByTagName("li")[1].classList.add("listitem");
-document.getElementsByTagName("li")[2].classList.add("listitem");
+for (let i =0; i<3;i++){
+document.getElementsByTagName("li")[i].classList.add("listitem");}
 //Adaugati un tag style(in head) care seteaza o regula pentru .listitem sa aiba culoarea rosie
 document.getElementsByTagName("head")[0].appendChild(document.createElement('style')).textContent = ".listitem{background-color:red;} ";
 // Creati un element img si setati atributul src sa aiba o poza cu voi sau ceva random de pe net. Puneti acest element(append) la pagina noastra
