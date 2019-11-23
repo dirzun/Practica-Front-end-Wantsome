@@ -151,31 +151,24 @@ Write a function named multipleCallbacks that accepts 3 arguments:
 
 The function should be written directly into ES6 specific syntax
 */
-const ob1 ={
-  status : "succes"};
-const ob2 = {
-  status : "error"
-};
+const multipleCallbacks = (objectArg,succesFunction,errorFunction)=>{
 
-const multipleCallbacks = (arg1,arg2,arg3)=>{
-
-  if (Object.keys(arg1)[0] !== "status") {
-  return "iesi afara!";
+  if (objectArg.status === "succes") {
+    return succesFunction();
 }
-  if (Object.value(arg1)[0] === "succes") {
-  return "succes"  ;
-}
-  if (Object.value(arg1)[0] === "error"){
-    return "error";
+  if (objectArg.status === "error"){
+    return errorFunction();
   }
 };
+const succesFunction =()=> console.log("Succes!");
+const errorFunction = () => console.log("Error!");
+//multipleCallbacks({status:"succes",bla:"bla"},succesFunction,errorFunction);
 
-multipleCallbacks();
+
 // 5
-/*
--- FAKE DATA FETCHER --
+//-- FAKE DATA FETCHER --
 
-const simulateServerCall = (url, params) {
+const simulateServerCall = (url, params)=>{
 	console.log(`Fetching data for ${params.userId} from: `, url);
 	setTimeout(() => {
     console.log('Server responded with success');
@@ -203,17 +196,28 @@ const simulateServerCall = (url, params) {
           title: 'Developer',
         },
       ]
-   };
+    };
    // now what ?
+    const developers = () => {
+      let dev = [];
+    for (i = 0; i <= fakeData.employees.length; i++){
+      if (fakeData.employees[i].title === "Developer"){
+        dev.push(fakeData.employees[i].name);
+  }};
+return dev;};
+
+  multipleCallbacks(fakeData.employees, developers);
   });
+  console.log(developers);
 };
 
 const fetchDataFor = userId => {
   simulateServerCall('https://server.com/employee', { userId: userId });
 };
 
-Adjust the upper functions so that a callback that filters the employees if they have a developer role
-is executed within the setTimeout that simulates a request to the server; The callback should be implemented by you
+/* Adjust the upper functions so that a callback that filters the employees if they have a developer role
+is executed within the setTimeout that simulates a request to the server; 
+The callback should be implemented by you
 and should print on the browser's console only the employees that are developers; 
 Requirement: reuse the filtering function that you have already implemented
 */
@@ -244,9 +248,23 @@ theFinalCountdown(10); call will display:
 
 and then stops
 */
-
-
 const theFinalCountdown = countNum =>{
+  let result = setInterval(function(){
+    console.log(countNum);
+    countNum--;
+  
+    if (countNum === 0) {
+      clearInterval(result);
+      console.log(countNum);
+    }
+  }, 1000);
+};
+//theFinalCountdown(10);
+
+
+
+
+/* const theFinalCountdown = countNum =>{
   let i = countNum;
   do {
     i--;
@@ -254,5 +272,4 @@ const theFinalCountdown = countNum =>{
   }
   while (i > 0);
 console.log("0");
-}
-//theFinalCountdown(10);
+}*/
