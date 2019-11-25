@@ -5,13 +5,12 @@ const checkFunction = ()=>{
     divError.id="error";
     let textEror =  document.createElement('p');
     let textdiv = divError.appendChild(textEror);
-
     
     const checkusername =()=>{
         let divUser = document.getElementById('username');
         let username =  document.querySelector('input[name = user]').value;
         if (username.length < 5){
-        divUser.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid username`;
+            divUser.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid username`;
         }
     }
     checkusername();
@@ -21,7 +20,7 @@ const checkFunction = ()=>{
         let divEmail = document.getElementById('email');
         let email =  document.querySelector('input[name = email]').value;
         if (!(email.match(pattern))){
-        divEmail.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid address`;
+            divEmail.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid address`;
         }
     }
     checkemail();
@@ -37,7 +36,6 @@ const checkFunction = ()=>{
         const lastName =()=>{
             let divLName = document.getElementById('lastName');
             let lastName = document.querySelector('input[name = lname]').value;
-        
             if (!lastName){
                 divLName.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid Last Name`;
             }
