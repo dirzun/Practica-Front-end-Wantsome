@@ -8,15 +8,17 @@ const checkFunction = ()=>{
 
     
     const checkusername =()=>{
+        //checkusername.preventDefault();
         let divUser = document.getElementById('username');
         let username =  document.querySelector('input[name = user]').value;
         if (username.length < 5){
         divUser.appendChild(divError).appendChild(textdiv).textContent = "must suck ";
         }
     }
-    //checkusername();
+    checkusername();
 
     const checkemail = () =>{
+        //checkemail.preventDefault();
         let pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
         let divEmail = document.getElementById('email');
         let email =  document.querySelector('input[name = email]').value;
@@ -24,10 +26,11 @@ const checkFunction = ()=>{
         divEmail.appendChild(divError).appendChild(textdiv).textContent = "must suck ";
         }
     }
-    //checkemail();
+    checkemail();
 
     const checkFLName = () =>{
         const firstName =()=>{
+            //firstName.preventDefault();
             let divFName = document.getElementById('firstName');
             let firstName = document.querySelector('input[name = fname]').value;
             if (!firstName){
@@ -35,6 +38,7 @@ const checkFunction = ()=>{
             }
         }
         const lastName =()=>{
+            //lastName.preventDefault();
             let divLName = document.getElementById('lastName');
             let lastName = document.querySelector('input[name = lname]').value;
         
@@ -43,10 +47,11 @@ const checkFunction = ()=>{
             }
         }
     }
-    //checkFLName();
+    checkFLName();
 
 
     const checkPhone = () => {
+        //checkPhone.preventDefault();
         let phone = document.querySelector('input[name = phone]').value;
         let divPhone = document.getElementById('phone');
         if (phone.length < 10) {

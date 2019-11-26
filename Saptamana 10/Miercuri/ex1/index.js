@@ -16,8 +16,9 @@ request.send();
 
 
 request.onload = () => { 
-    let superHeroes = request.response;
+    const superHeroes = request.response;
     populateHeader(superHeroes);
+    showHeroes(superHeroes);
 };
 
 const populateHeader = jsonObj => {
@@ -30,16 +31,35 @@ const populateHeader = jsonObj => {
     header.appendChild(myPara);
 };
 
-const showHeroes = jsonObj =>{
-    let heroes = jsonObj['members'];
-    for (let i=0; i <= jsonObj.length; i++){
-        let myArticle = document.createElement('article'); 
-        let myH2 = document.createElement('h2');
-        let myPara1 = document.createElement('p');
-        let myPara2 = document.createElement('p');
-        let myPara3 = document.createElement('p');
-        let myList = document.createElement('ul');
+function showHeroes(jsonObj) {
+    const heroes = jsonObj['members'];
         
-    } 
-
-}
+    for (let i = 0; i < heroes.length; i++) {
+      const myArticle = document.createElement('article');
+      const myH2 = document.createElement('h2');
+      const myPara1 = document.createElement('p');
+      const myPara2 = document.createElement('p');
+      const myPara3 = document.createElement('p');
+      const myList = document.createElement('ul');
+  
+      myH2.textContent = heroes[i].name;
+      myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
+      myPara2.textContent = 'Age: ' + heroes[i].age;
+      myPara3.textContent = 'Superpowers:';
+          
+      const superPowers = heroes[i].powers;
+      for (let j = 0; j < superPowers.length; j++) {
+        const listItem = document.createElement('li');
+        listItem.textContent = superPowers[j];
+        myList.appendChild(listItem);
+      }
+  
+      myArticle.appendChild(myH2);
+      myArticle.appendChild(myPara1);
+      myArticle.appendChild(myPara2);
+      myArticle.appendChild(myPara3);
+      myArticle.appendChild(myList);
+  
+      section.appendChild(myArticle);
+    }
+  }
