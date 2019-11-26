@@ -282,5 +282,4 @@ let movieLists2 = [
 ];
 //Returnati id, title, si 150x200 box art url pentru fiecare video
 const movieLists2Function = () => movieLists2.map(x => 
-    x.videos.map(a =>"id: " + a.id +" title: "+ a.title+ " boxarts: " + a.boxarts
-    .filter((c) => c.width === 200 && c.height === 200) + " url: "+ a.url));
+    x.videos.map(a =>"id: " + a.id +" title: "+ a.title+ " boxarts: " + a.boxarts.filter((c) => c.width === 150 && c.height === 200) + " url: "+ a.url));
