@@ -8,6 +8,7 @@ request.onload = () => {
     console.log(serverResponse);
 const quote = document.getElementById('quote');
 const btn = document.getElementById('xhr');
+
 btn.addEventListener('click',(e) => {e.preventDefault(); quote.textContent = serverResponse},false);
 
 }

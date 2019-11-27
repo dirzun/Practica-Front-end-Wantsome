@@ -61,8 +61,7 @@ button {
   border: none;
 }
 
-#error,
-.error {
+#error {
   width: 100%;
   height: 25px;
   border: 1px solid red;
@@ -72,9 +71,21 @@ button {
   font-weight: 700;
 }
 
-#error p,
-.error p {
+#error p {
   margin: 5px;
   font-size: 12px;
+  display: block;
+}
+
+div p {
+  display: none;
+  -webkit-transition: ease-in 1s;
+  transition: ease-in 1s;
+}
+
+div input:focus + p {
+  display: block;
+  -webkit-transition: ease-in 1s;
+  transition: ease-in 1s;
 }
 /*# sourceMappingURL=style.css.map */
