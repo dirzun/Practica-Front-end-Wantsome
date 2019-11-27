@@ -4,6 +4,7 @@ body {
   background-color: #f3f3f3;
   box-sizing: border-box;
 }
+
 .formBox {
   width: 400px;
   color: #333535;
@@ -52,8 +53,7 @@ button {
   font-family: "Open Sans", sans-serif;
   border: none;
 }
-#error,
-.error {
+#error {
   width: 100%;
   height: 25px;
   border: 1px solid red;
@@ -64,5 +64,18 @@ button {
   p {
     margin: 5px;
     font-size: 12px;
+    display: block;
+  }
+}
+
+
+div {
+  p{
+    display: none;
+    transition: ease-in 1s;
+  }
+  input:focus + p {
+    display: block;
+    transition: ease-in 1s;
   }
 }
