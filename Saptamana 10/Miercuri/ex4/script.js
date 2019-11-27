@@ -8,8 +8,13 @@ request.onload = () => {
     const replImg = () =>{
         const body = document.getElementsByTagName('body')[0];
         const textdel = document.getElementsByClassName('text')[0].style.display="none";
-        const img = document.createElement('img');
-        body.appendChild(img).setAttribute('src', serverResponse);
+        
+        const imgObj = serverResponse.data.children;
+        for (let i =0; i < imgObj.length; i++){
+            const img = document.createElement('img');
+            body.appendChild(img).setAttribute('src', imgObj[i].data.thumbnail);
+        }
+        
     }
     //replImg();
     const btn = document.getElementsByClassName('btn')[0];
