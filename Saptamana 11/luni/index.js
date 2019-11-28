@@ -41,8 +41,13 @@ console.log(computeExamPass([
     },
 ]));
 //done
+//ex5 afisare in pagina
+const getPersonsDomElements =(bla4)=> {
+const display = bla4.map(obj => '<h1>' + obj.name +' '+ obj.surname + '</h1>' + '<h2>'+obj.age+'</h2>');
+const body = document.getElementsByTagName('body')[0];
+return body.innerHTML = display;
+};
 
-const getPersonsDomElements =(bla4)=> bla4.map(obj => '<h1>' + obj.name +' '+ obj.surname + '</h1>' + '<h2>'+obj.age+'</h2>');
 console.log(getPersonsDomElements([
     {
     name: "Angelina",
@@ -55,6 +60,7 @@ console.log(getPersonsDomElements([
     age: 27
     },
 ]));
+
 //done
 
 

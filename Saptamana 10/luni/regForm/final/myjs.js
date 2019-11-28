@@ -5,6 +5,8 @@ const checkFunction = ()=>{
     divError.id="error";
     let textEror =  document.createElement('p');
     let textdiv = divError.appendChild(textEror);
+   
+
     
     const checkusername =()=>{
         let divUser = document.getElementById('username');
@@ -12,9 +14,12 @@ const checkFunction = ()=>{
         if (username.length < 5){
             divUser.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid username`;
         }
+        checkusername.preventDefault();
     }
     checkusername();
 
+
+    
     const checkemail = () =>{
         let pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
         let divEmail = document.getElementById('email');
@@ -22,9 +27,15 @@ const checkFunction = ()=>{
         if (!(email.match(pattern))){
             divEmail.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid address`;
         }
+        checkemail.preventDefault();
     }
     checkemail();
 
+
+
+
+
+            
     const checkFLName = () =>{
         const firstName =()=>{
             let divFName = document.getElementById('firstName');
@@ -32,6 +43,7 @@ const checkFunction = ()=>{
             if (!firstName){
                 divFName.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid First Name`;
             }
+            firstName.preventDefault();
         }
         const lastName =()=>{
             let divLName = document.getElementById('lastName');
@@ -39,19 +51,22 @@ const checkFunction = ()=>{
             if (!lastName){
                 divLName.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid Last Name`;
             }
+            lastName.preventDefault();
         }
     }
     checkFLName();
 
-
+    
     const checkPhone = () => {
         let phone = document.querySelector('input[name = phone]').value;
         let divPhone = document.getElementById('phone');
         if (phone.length < 10) {
             divPhone.appendChild(divError).appendChild(textdiv).textContent = `Must be at least 10 characters`;
         }
+        checkPhone.preventDefault();
     }
     checkPhone();
+
 }
 
 
