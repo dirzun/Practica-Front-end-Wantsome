@@ -74,4 +74,5 @@ const compose = (num) => square(double(num));
 //faceti o functie find care ia ca parametrii un array si o functie care testeaza arrayul si returneaza doar elmentele care trec testele.
 // find([1,2,3,4,5], isOdd); returneaza 1 3 5
 const isOdd = (a) => a.filter(a => a%2 !== 0);
-const find = (arrai, fuction)=> arrai.map(x => fuction(x));
+
+const find = (arrai, fuction)=> fuction(arrai);
