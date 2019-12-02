@@ -1,77 +1,56 @@
+const btn = document.getElementById('button');
+const form = document.getElementById('form');
 
-const checkFunction = ()=>{
+const divUser = document.getElementById('username');
+const createError = (input, text) => {
+  let divError = document.createElement('div');
+  divError.id="error";
+  let textEror =  document.createElement('p');
+  let textdiv = divError.appendChild(textEror);
+  input.appendChild(divError).appendChild(textdiv).textContent = text;
+};
 
-    let divError = document.createElement('div');
-    divError.id="error";
-    let textEror =  document.createElement('p');
-    let textdiv = divError.appendChild(textEror);
-   
+btn.addEventListener('click',(e)=>{
+  e.preventDefault();
+  //error
+  //username
+  const userName =  document.querySelector('input[name = user]').value;
+  //email
+  const pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+  const divEmail = document.getElementById('email');
+  const email =  document.querySelector('input[name = email]').value;
 
-    
-    const checkusername =()=>{
-        let divUser = document.getElementById('username');
-        let username =  document.querySelector('input[name = user]').value;
-        if (username.length < 5){
-            divUser.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid username`;
-        }
-        checkusername.preventDefault();
-    }
-    checkusername();
+  //first&last name
+  const divFName = document.getElementById('firstName');
+  const firstName = document.querySelector('input[name = fname]').value;
+  const divLName = document.getElementById('lastName');
+  const lastName = document.querySelector('input[name = lname]').value;
 
+  //phone
+  const phone = document.querySelector('input[name = phone]').value;
+  const divPhone = document.getElementById('phone');
+  if (userName.length < 5 || username === " "){
+    e.preventDefault();
+    createError(divUser,'Please enter a valid First Name');
+  }
 
-    
-    const checkemail = () =>{
-        let pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-        let divEmail = document.getElementById('email');
-        let email =  document.querySelector('input[name = email]').value;
-        if (!(email.match(pattern))){
-            divEmail.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid address`;
-        }
-        checkemail.preventDefault();
-    }
-    checkemail();
+  if (!(email.match(pattern))){
+    e.preventDefault();
+    createError(divEmail, 'Please enter a valid address')
 
+  }
 
+  if (!firstName){
+    e.preventDefault();
+    createError(divFName,'Please enter a valid First Name');
+  }
+  if (!lastName){
+    e.preventDefault();
+    createError(divLName, `Please enter a valid Last Name`);
+  }
+  if (phone.length < 10) {
+    e.preventDefault();
+    createError(divPhone,`Must be at least 10 characters`);
+  }
 
-
-
-            
-    const checkFLName = () =>{
-        const firstName =()=>{
-            let divFName = document.getElementById('firstName');
-            let firstName = document.querySelector('input[name = fname]').value;
-            if (!firstName){
-                divFName.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid First Name`;
-            }
-            firstName.preventDefault();
-        }
-        const lastName =()=>{
-            let divLName = document.getElementById('lastName');
-            let lastName = document.querySelector('input[name = lname]').value;
-            if (!lastName){
-                divLName.appendChild(divError).appendChild(textdiv).textContent = `Please enter a valid Last Name`;
-            }
-            lastName.preventDefault();
-        }
-    }
-    checkFLName();
-
-    
-    const checkPhone = () => {
-        let phone = document.querySelector('input[name = phone]').value;
-        let divPhone = document.getElementById('phone');
-        if (phone.length < 10) {
-            divPhone.appendChild(divError).appendChild(textdiv).textContent = `Must be at least 10 characters`;
-        }
-        checkPhone.preventDefault();
-    }
-    checkPhone();
-
-}
-
-
-
-
-
-let btn = document.getElementById('button');
-btn.addEventListener("click",checkFunction,true);
+});
