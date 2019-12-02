@@ -69,7 +69,7 @@ const releases = [
         "bookmark": [{ id: 432534, time: 65876586 }]
     }
 ];
-const arrReleases = () => releases.map((x) =>{return "id: " + x.id + " " + "title: " + x.title + "," } )
+const arrReleases = () => releases.map((obiect) =>{return {"id" : obiect.id, "title" : obiect.title}} );
 
 // Returnati id-urile videourilor care au rating 5.0
 const newReleases = [
@@ -107,7 +107,7 @@ const newReleases = [
     }
 ];
 
-const releasesFilter = () => newReleases.filter(m =>m.rating === 5).map(x => x.id);
+const releasesFilter = () => newReleases.filter(obiect =>obiect.rating === 5).map(obiect => obiect.id);
 
 // Vreau la final sa am o lista de video ids
 
@@ -221,8 +221,8 @@ let movieLists2 = [
     }
 ];
 //Returnati id, title, si 150x200 box art url pentru fiecare video
-const movieLists2Function = () => movieLists2.map(x => 
-    x.videos.map(a =>"id: " + a.id +" title: "+ a.title+ " boxarts: " + a.boxarts.filter((c) => c.width === 150 && c.height === 200).map(d=>d.url)));
+const movieLists2Function = () => movieLists2.map(obiectMare => 
+    obiectMare.videos.map((obiectulDinObiect) =>{return {"id" : obiectulDinObiect.id, "title" : obiectulDinObiect.title,  "boxarts" :  obiectulDinObiect.boxarts.filter((boxArt) => boxArt.width === 150 && boxArt.height === 200).map(boxArtLink=>boxArtLink.url)}}));
 
 
 
