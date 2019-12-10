@@ -88,7 +88,8 @@ const capitalizeWords = (some) =>{
         resolve(some.map(litera => litera.charAt(0).toUpperCase() + litera.substring(1)));
       }
         else {
-            reject(console.log("this array is shit" ));
+          let eroare = "this array is shit";
+            reject(eroare);
         }
         
     })
@@ -97,7 +98,7 @@ const capitalizeWords = (some) =>{
 }
 const sortWords=(x)=> x.sort();
 const result=(y)=>console.log(y);
-const arr = eroare => console.log(reject());
+const arr = eror => console.log(eror);
 
 
 capitalizeWords(['abc','mia','bubble','bobs'])
