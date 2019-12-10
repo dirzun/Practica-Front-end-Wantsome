@@ -95,7 +95,7 @@ const capitalizeWords = (some) =>{
 
     return pomis;
 }
-const sortWords=(x)=> x.sort((a,b)=>a-b);
+const sortWords=(x)=> x.sort();
 const result=(y)=>console.log(y);
 const arr = eroare => console.log(reject());
 
