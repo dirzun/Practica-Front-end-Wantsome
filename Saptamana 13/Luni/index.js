@@ -95,19 +95,15 @@ const capitalizeWords = (some) =>{
 
     return pomis;
 }
-const sortWords = (x) =>{
- return new Promise((resolve, reject)=>{
-        resolve(Array.sort());
-    }); 
-}
- const result = () =>{
-   return console.log(result);
- }
+const sortWords=(x)=> x.sort((a,b)=>a-b);
+const result=(y)=>console.log(y);
+const arr = eroare => console.log(reject());
+
 
 capitalizeWords(['abc','mia','bubble','bobs'])
 .then(sortWords)
-//.then(result)
-//.catch(arr)
+.then(result)
+.catch(arr)
 
 
 /*
