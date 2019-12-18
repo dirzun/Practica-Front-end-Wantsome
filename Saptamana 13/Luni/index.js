@@ -96,18 +96,90 @@ const capitalizeWords = (some) =>{
 
     return pomis;
 }
-const sortWords=(x)=> x.sort();
-const result=(y)=>console.log(y);
+const sortWords = (x)=> x.sort();
+const result = (y)=>console.log(y);
 const arr = eror => console.log(eror);
 
 
-capitalizeWords(['abc','mia','bubble','bobs'])
-.then(sortWords)
-.then(result)
-.catch(arr)
+//capitalizeWords(['abc','mia','bubble','bobs'])
+//.then(sortWords)
+//.then(result)
+//.catch(arr)
 
 
 /*
 5.Implementati functionalitatea anterior prezentata si folositi-o pentru a apela mai multe API-uri externe, la alegere (
 cel putin 3 )
+https://cat-fact.herokuapp.com/Facts
+https://random.dog/woof.json
+*/
+
+
+
+const dog ='https://random.dog/woof.json';
+const request = new XMLHttpRequest();
+request.open('GET',dog);
+request.onload =()=>{
+  const serverResponse = JSON.parse(request.response);
+  console.log(serverResponse);
+  const display = () =>{
+    document.getElementsByTagName('img')[0].setAttribute('src', serverResponse.url)
+  }
+  display();
+
+  const rel = () =>window.location.reload();
+  document.getElementsByTagName('button')[0].addEventListener('click',rel);
+  
+}
+request.send();
+
+/*
+const cat ='https://cat-fact.herokuapp.com/facts/random';
+const reqst = new XMLHttpRequest();
+reqst.open('GET', cat);
+reqst.onload=()=>{
+  const serverResponse2 = JSON.parse(reqst.response);
+  console.log(serverResponse2);
+}
+reqst.send();
+*/
+
+
+
+
+/*
+const dog ='https://random.dog/woof.json';
+function get(dog) {
+  // Return a new promise.
+  return new Promise(function(resolve, reject) {
+    // Do the usual XHR stuff
+    var req = new XMLHttpRequest();
+    req.open('GET', dog);
+
+    req.onload = function() {
+
+
+      
+      // This is called even on 404 etc
+      // so check the status
+      if (req.status == 200) {
+        // Resolve the promise with the response text
+        resolve(req.response);
+      }
+      else {
+        // Otherwise reject with the status text
+        // which will hopefully be a meaningful error
+        reject(Error(req.statusText));
+      }
+    };
+
+    // Handle network errors
+    req.onerror = function() {
+      reject(Error("Network Error"));
+    };
+
+    // Make the request
+    req.send();
+  });
+}
 */
