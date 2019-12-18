@@ -30,14 +30,14 @@ Apelati functia si folositi consumatorii then si catch pentru a trata ambele caz
 */
 const checkstr = string => {
   return new Promise((resolve, reject) => {
-      const wordReg = /promise/;
-      //string.includes('promise')
+    const wordReg = /promise/;
+    //string.includes('promise')
     if (wordReg.test(string)) {
       return resolve(`contine ${string}`);
     } else {
       return reject(`nu contine ${string}`);
     }
-  });// daca contine corectare
+  }); // daca contine corectare
 };
 /*
 checkstr("daspromise").then(cuvant => {
@@ -82,30 +82,28 @@ A doua functie, sortWords(), va primi ca si argument rezultatul primului Promise
 alfabetica. In cazul in care array-ul initial contine un element cu o valoare diferita de tipul string, se va face reject.
 */
 
-const capitalizeWords = (some) =>{
-    let pomis =  new Promise((resolve, reject)=>{
-        if ( some.every(elemt => typeof elemt === "string")){
-        resolve(some.map(litera => litera.charAt(0).toUpperCase() + litera.substring(1)));
-      }
-        else {
-          let eroare = "this array is shit";
-            reject(eroare);
-        }
-        
-    })
+const capitalizeWords = some => {
+  let pomis = new Promise((resolve, reject) => {
+    if (some.every(elemt => typeof elemt === "string")) {
+      resolve(
+        some.map(litera => litera.charAt(0).toUpperCase() + litera.substring(1))
+      );
+    } else {
+      let eroare = "this array is shit";
+      reject(eroare);
+    }
+  });
 
-    return pomis;
-}
-const sortWords = (x)=> x.sort();
-const result = (y)=>console.log(y);
+  return pomis;
+};
+const sortWords = x => x.sort();
+const result = y => console.log(y);
 const arr = eror => console.log(eror);
-
 
 //capitalizeWords(['abc','mia','bubble','bobs'])
 //.then(sortWords)
 //.then(result)
 //.catch(arr)
-
 
 /*
 5.Implementati functionalitatea anterior prezentata si folositi-o pentru a apela mai multe API-uri externe, la alegere (
@@ -114,23 +112,22 @@ https://cat-fact.herokuapp.com/Facts
 https://random.dog/woof.json
 */
 
-
-
-const dog ='https://random.dog/woof.json';
+const dog = "https://random.dog/woof.json";
 const request = new XMLHttpRequest();
-request.open('GET',dog);
-request.onload =()=>{
+request.open("GET", dog);
+request.onload = () => {
   const serverResponse = JSON.parse(request.response);
   console.log(serverResponse);
-  const display = () =>{
-    document.getElementsByTagName('img')[0].setAttribute('src', serverResponse.url)
-  }
+  const display = () => {
+    document
+      .getElementsByTagName("img")[0]
+      .setAttribute("src", serverResponse.url);
+  };
   display();
 
-  const rel = () =>window.location.reload();
-  document.getElementsByTagName('button')[0].addEventListener('click',rel);
-  
-}
+  const rel = () => window.location.reload();
+  document.getElementsByTagName("button")[0].addEventListener("click", rel);
+};
 request.send();
 
 /*
@@ -142,44 +139,4 @@ reqst.onload=()=>{
   console.log(serverResponse2);
 }
 reqst.send();
-*/
-
-
-
-
-/*
-const dog ='https://random.dog/woof.json';
-function get(dog) {
-  // Return a new promise.
-  return new Promise(function(resolve, reject) {
-    // Do the usual XHR stuff
-    var req = new XMLHttpRequest();
-    req.open('GET', dog);
-
-    req.onload = function() {
-
-
-      
-      // This is called even on 404 etc
-      // so check the status
-      if (req.status == 200) {
-        // Resolve the promise with the response text
-        resolve(req.response);
-      }
-      else {
-        // Otherwise reject with the status text
-        // which will hopefully be a meaningful error
-        reject(Error(req.statusText));
-      }
-    };
-
-    // Handle network errors
-    req.onerror = function() {
-      reject(Error("Network Error"));
-    };
-
-    // Make the request
-    req.send();
-  });
-}
 */
