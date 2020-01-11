@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+/* css extern*/
+
+body section {
+  width: 100%;
+}
+
+body section h1 {
+  width: 95%;
+  margin: auto;
+  text-align: left;
+  font-size: 25px;
+  line-height: 40px;
+}
+
+body section .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95%;
+  margin: auto;
+}
+
+body section .content .box {
+  width: 32%;
+  margin-right: 0.3%;
+  margin-top: 0.3%;
+  margin-bottom: 0.3%;
+}
+
+body section .content .box .contentBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+body section .content .box .contentBox .imgBox {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body section .content .box .contentBox .imgBox img {
+  border-radius: 3px;
+  width: 100%;
+}
+
+body section .content .box .contentBox .description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  font-size: 70%;
+  text-align: left;
+}
+
+body section .content .box .contentBox .description p {
+  margin: 0px;
+  padding: 0px;
+  line-height: 20px;
+  font-weight: 400;
+  color: gray;
+}
+
+body section .content .box .contentBox .description h2 {
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+  line-height: 26px;
+}
