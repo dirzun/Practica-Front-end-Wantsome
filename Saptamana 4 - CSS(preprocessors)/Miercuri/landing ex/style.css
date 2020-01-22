@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap");
+.cont1, .cont2, .cont3, .cont4, .cont5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-image: url("assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-color: #5385c1;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.cont1 {
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  color: white;
+  padding: 30px;
+}
+
+.cont1 p {
+  padding-left: 20px;
+}
+
+.cont1 header, .cont1 nav {
+  width: 50%;
+}
+
+.cont1 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.cont1 nav ul, .cont1 li, .cont1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.cont1 nav ul li {
+  display: inline;
+  padding: 20px;
+}
+
+.cont1 nav ul li :hover {
+  border-bottom: 1px solid white;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.cont2 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  color: white;
+  padding: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cont2 h1 {
+  font-weight: 300;
+  font-size: 56px;
+  text-align: center;
+  margin: 0px;
+}
+
+.cont2 h3 {
+  margin: 0px;
+  font-weight: 200;
+  font-size: 16px;
+}
+
+.cont3 {
+  background-color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 70px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cont3 div {
+  padding: 30px;
+  min-width: 200px;
+  width: 250px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cont3 div h1 {
+  font-weight: 300;
+  font-size: 22px;
+  color: #5385c1;
+  line-height: 30px;
+}
+
+.cont3 div p {
+  color: #9a9a9a;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.cont3 button {
+  padding: 0px 20px;
+  line-height: 40px;
+  color: white;
+  background: #5385c1;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.cont3 button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #79abe7;
+}
+
+.cont4 {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  color: white;
+  border: 1px solid green;
+  padding: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  background-color: #5385c1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0px 100px 0px;
+}
+
+.cont4 h1 {
+  color: white;
+  font-weight: 200;
+  font-size: 40px;
+  margin: 0px 0px 0px 0px;
+}
+
+.cont4 p {
+  color: #bacee6;
+  font-size: 14px;
+  font-weight: 200;
+  margin: 20px 0px 30px 0px;
+}
+
+.cont4 .contact {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.cont4 .contact div {
+  border: 1px solid rgba(255, 255, 255, 0.349);
+  padding: 50px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  margin: 30px;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+}
+
+.cont4 .contact div:hover {
+  background-color: rgba(255, 255, 255, 0.205);
+}
+
+.cont4 .contact div img {
+  width: 170px;
+  border-radius: 50%;
+}
+
+.cont4 .contact div h1 {
+  text-align: center;
+  font-size: 25px;
+  margin: 20px 0px 0px 0px;
+}
+
+.cont4 .contact div p {
+  font-weight: 200;
+  color: #bacee6;
+  text-align: center;
+  margin: 0px;
+}
+
+.cont5 {
+  background-color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 70px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cont5 .tit {
+  text-align: center;
+  padding: 50px 0px 40px 0px;
+}
+
+.cont5 .tit h1 {
+  margin: 0px;
+  font-size: 35px;
+  font-weight: 300;
+  color: #5385c1;
+  line-height: 40px;
+}
+
+.cont5 .tit p {
+  margin: 0px;
+  line-height: 40px;
+  color: #9a9a9a;
+  font-weight: 200;
+}
+
+.cont5 .articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cont5 .articles button {
+  padding: 0px 20px;
+  line-height: 40px;
+  color: white;
+  background: #5385c1;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.cont5 .articles button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  background-color: #79abe7;
+}
+
+.cont5 .articles div {
+  margin: 10px;
+  min-width: 450px;
+  width: 45%;
+  padding: 20px 0px 50px 0px;
+}
+
+.cont5 .articles div img {
+  width: 100%;
+  height: auto;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.cont5 .articles div img:hover {
+  opacity: 0.7;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.cont5 .articles div h1 {
+  color: #5385c1;
+  font-weight: 300;
+}
+
+.cont5 .articles div p {
+  font-weight: 200;
+  color: #9a9a9a;
+  line-height: 25px;
+}
+
+footer {
+  background-color: white;
+  padding: 30px;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer p {
+  color: #b8b6b6;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+footer svg {
+  padding: 15px;
+  width: 15px;
+  height: 15px;
+  color: #5385c1;
+  margin: 0px;
+}
+/*# sourceMappingURL=style.css.map */

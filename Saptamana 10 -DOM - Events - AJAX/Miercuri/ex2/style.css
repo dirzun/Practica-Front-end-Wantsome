@@ -1,0 +1,12 @@
+li{
+    width: 100%;
+    text-decoration: none;
+    margin:0px;
+    list-style-type: none;
+    border:none;
+    transition: ease-in-out 0.3s;
+}
+li:focus, li:hover{
+    transform: scale(1.01);
+    
+}
