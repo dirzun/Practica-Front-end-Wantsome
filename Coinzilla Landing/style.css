@@ -1,230 +1,46 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  text-decoration: none;
-}
 
-.col,
-.col-1,
-.col-10,
-.col-11,
-.col-12,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-auto,
-.col-lg,
-.col-lg-1,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12,
-.col-lg-2,
-.col-lg-3,
-.col-lg-4,
-.col-lg-5,
-.col-lg-6,
-.col-lg-7,
-.col-lg-8,
-.col-lg-9,
-.col-lg-auto,
-.col-md,
-.col-md-1,
-.col-md-10,
-.col-md-11,
-.col-md-12,
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-md-auto,
-.col-sm,
-.col-sm-1,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12,
-.col-sm-2,
-.col-sm-3,
-.col-sm-4,
-.col-sm-5,
-.col-sm-6,
-.col-sm-7,
-.col-sm-8,
-.col-sm-9,
-.col-sm-auto,
-.col-xl,
-.col-xl-1,
-.col-xl-10,
-.col-xl-11,
-.col-xl-12,
-.col-xl-2,
-.col-xl-3,
-.col-xl-4,
-.col-xl-5,
-.col-xl-6,
-.col-xl-7,
-.col-xl-8,
-.col-xl-9,
-.col-xl-auto,
-.row {
-  position: relative;
-  width: 100%;
-  min-height: 1px;
-  margin: 0px !important;
-  text-decoration: none;
+html{
+  scroll-behavior:smooth;
 }
-
-*, ::after, ::before {
+.dexBox *, ::after, ::before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  
+  -ms-overflow-style: none !important;
 }
-
-html,
-body {
+.dexBox .col,.col-12,.col-11,.col-1,.row{
+  
+  text-decoration: none;
+  
   position: relative;
-  width: 100%;
-  max-width: 100%;
-  background: #f8fcfe;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  
 }
 
-html {
-  font-family: "Ubuntu", sans-serif;
-  line-height: 1.15;
+.dexBox {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior:smooth !important;
+  overflow: -moz-scrollbars-none !important;
+  scrollbar-width: none !important;
 }
-
-html body {
-  text-align: left;
-  color: #2b4470;
-  background-color: #f8fcfe;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-h1 {
+.dexBox h1 {
   font-family: "Ubuntu", sans-serif !important;
   font-size: 30px !important;
   font-weight: bold !important;
-
+  color: #2b4470;
 }
 
-h2 {
+.dexBox h2 {
   font-family: "Monstserrat", sans-serif;
   font-size: 18px !important;
   font-weight: 600 !important;
 }
 
-a, a:link, a:visited, a:active, a:focus, a:hover {
+.dexBox a, a:link, a:visited, a:active, a:focus, a:hover {
   text-decoration: none !important;
   color: #2b4470 !important;
-  cursor: pointer;
+  cursor: default;
 }
-p {
+.dexBox p {
   font-family: "Monstserrat", sans-serif !important;
   font-size: 17px !important;
   font-weight: 400 !important;
@@ -236,7 +52,6 @@ p {
   display: flex;
   margin-top:16px;
   margin-bottom: 23px;
-
 }
 .boxLetter{
   overflow: scroll;
@@ -265,6 +80,7 @@ p {
   width: 100%;
   height: 2px;
   margin-left: 16px;
+  margin-right: 16px;
 }
 .dexItems{
   margin-bottom:10px;
@@ -283,16 +99,15 @@ p {
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
-  max-width: 35px !important;
+  width: 35px !important;
   height: 100% !important;
-
-
 }
+
 /* scrool */
 .scroll {
   white-space: nowrap; 
   -webkit-overflow-scrolling: touch; 
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: -ms-autohiding-scrollbar !important;
   align-self: center;
   display: flex;
   align-items: center;
@@ -302,12 +117,14 @@ p {
   min-height: 0px !important;
   height: 100vh; 
   height: calc(var(--vh, 1vh) * 100);
+  background: transparent !important;
+  scrollbar-width: none !important;
 }
 .scroll::-webkit-scrollbar {
-  display: none; 
-  scrollbar-width: none;
-  width: 0px;
-  background: transparent;
+  display: none !important; 
+  width: 0px !important;
+  background: transparent !important;
+  scrollbar-width: none !important;
 }
 
 
@@ -321,11 +138,14 @@ p {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 25px;
+  cursor: pointer;
+  scrollbar-width: none !important;
 }
 .glossaryABC .scroll a:hover{
   background-color: #2b4470;
   color:#fff !important;
   transition: ease-in-out 0.3s;
+  scrollbar-width: none !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -335,5 +155,10 @@ p {
     line-height: 25px;
     font-size: 20px;
     padding-bottom:20px !important ;
+    scrollbar-width: none !important;
   }
+}
+
+.hide{
+  display: none;
 }

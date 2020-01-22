@@ -1,1 +1,6 @@
-# Practica-Front-end-Wantsome
+# y
+## airbnbv2
+run:
+```
+npx y
+```
